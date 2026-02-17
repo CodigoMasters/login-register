@@ -1,18 +1,18 @@
 /* ===== Variables ===== */
 :root {
   --font: 'Outfit', system-ui, sans-serif;
-  --bg: #0a0a0f;
-  --surface: rgba(255, 255, 255, 0.04);
+  --bg: #00002b;
+  --surface: rgba(238, 14, 14, 0.04);
   --surface-border: rgba(255, 255, 255, 0.08);
   --text: #f0f0f5;
   --text-muted: rgba(255, 255, 255, 0.5);
-  --accent: #00d4aa;
-  --accent-glow: rgba(0, 212, 170, 0.4);
+  --accent: #226ad6;
+  --accent-glow: rgba(19, 247, 202, 0.4);
   --accent-secondary: #7c3aed;
   --danger: #f43f5e;
   --radius: 16px;
   --radius-sm: 10px;
-  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --shadow: 0 25px 50px -12px rgba(243, 49, 49, 0.5);
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -173,9 +173,9 @@ body {
   left: 4px;
   width: calc(50% - 4px);
   height: calc(100% - 8px);
-  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #145de4 100%);
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 4px 20px var(--accent-glow);
   transform: translateX(calc(var(--pos) * 100%));
   transition: transform var(--transition);
 }
@@ -238,7 +238,7 @@ body {
 
 .field input.error {
   border-color: var(--danger);
-  box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.25);
+  box-shadow: 0 0 0 2px rgb(255, 0, 43);
 }
 
 .field label {
@@ -337,19 +337,19 @@ body {
   font-family: var(--font);
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+  color: var(--bg);
+  background: linear-gradient(135deg, var(--accent) 0%, #07a6eb 100%);
   border: none;
   padding: 1rem 1.5rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: transform 0.2s, box-shadow var(--transition);
-  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 4px 20px var(--accent-glow);
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(14, 165, 233, 0.5);
+  box-shadow: 0 8px 28px var(--accent-glow);
 }
 
 .btn:active {
